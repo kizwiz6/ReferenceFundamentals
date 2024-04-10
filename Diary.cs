@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace ReferenceFundamentals
 {
-    class Dissertation : Book, IFlippable
+    class Diary : Book, IFlippable
     {
-        public int CurrentPage { get; set; }
+        public int CurrentPage
+        { get; set; }
 
-        public Dissertation(int page = 0) : base()
+        public Diary(int page = 0) : base()
         {
             CurrentPage = page;
         }
 
-        public Dissertation(int page, string author, string title) : base(author, title)
+        public Diary(int page, string author, string title) : base(author, title)
         {
             CurrentPage = page;
         }
@@ -25,14 +26,14 @@ namespace ReferenceFundamentals
             CurrentPage++;
         }
 
-        public string Define()
+        public string SpillSecret()
         {
-            return "dissertation - along essay on a particular object";
+            return "OMG Samantha is cheating on Chris! </3";
         }
 
         public override string Stringify()
         {
-            return "This is a Dissertation object!";
+            return "This is a Diary object!";
         }
     }
 }
